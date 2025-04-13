@@ -18,30 +18,13 @@ This Android application demonstrates the flood fill algorithm using both View-b
 - **State Management (Compose):** Manages the grid state and color selection within the Compose UI.
 - **Kotlin:** The primary programming language for the application.
 
-## Dependencies
-
-- **Core Libraries:**
-    - `androidx.core:core-ktx`
-    - `androidx.appcompat:appcompat`
-    - `com.google.android.material:material`
-    - `androidx.constraintlayout:constraintlayout`
-
-- **View-based Implementation:**
-    - `androidx.recyclerview:recyclerview`
-    - `androidx.databinding:viewbinding`
-
-- **Compose UI Implementation:**
-    - `androidx.activity:activity-compose`
-    - `androidx.compose.ui:ui`
-    - `androidx.compose.material3:material3`
-
-- **Lifecycle Management:**
-    - `androidx.lifecycle:lifecycle-runtime-ktx`
-
-- **Testing (Optional):**
-    - `junit:junit`
-    - `androidx.test.ext:junit`
-    - `androidx.test.espresso:espresso-core`
+## Uses
+- Compose
+- View Binding
+- Coroutines
+- Material Design
+- Flood fill algorithm
+- Recycler views
 
 ## Color Flexibility
 
@@ -52,7 +35,7 @@ The application allows users to select from a variety of colors to use for the f
 
 ## Getting Started
 
-1. **Clone the repository:**  `git clone <repository_url>`
+1. **Clone the repository:**  `git clone <https://github.com/pikede/FloodFill.git>`
 2. **Open in Android Studio:** Import the project into Android Studio.
 3. **Build and Run:** Build the project and run it on an emulator or a physical device.
 
