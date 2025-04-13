@@ -68,8 +68,12 @@ dependencies {
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.lifecycle.compose)
 
     implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation.compose)
+//    implementation(libs.androidx.navigation.compose)
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     ksp(libs.hilt.compiler)
 
     implementation("androidx.recyclerview:recyclerview:1.4.0")

@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.floodfill.compose_based.FloodFillRoute
 import com.example.floodfill.databinding.ActivityMainBinding
 import com.example.floodfill.ui.theme.FloodFillTheme
 import com.example.floodfill.view_based.FloodFillFragment
@@ -37,10 +38,7 @@ class MainActivity : AppCompatActivity() {
         setContent {
             FloodFillTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    FloodFillRoute(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -51,21 +49,5 @@ class MainActivity : AppCompatActivity() {
             .add(android.R.id.content, FloodFillFragment.newInstance())
             .addToBackStack(null)
             .commit()
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    FloodFillTheme {
-        Greeting("Android")
     }
 }
