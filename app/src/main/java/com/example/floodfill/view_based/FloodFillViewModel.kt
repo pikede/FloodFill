@@ -1,10 +1,10 @@
 package com.example.floodfill.view_based
 
 import android.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CompletableJob
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -38,6 +38,7 @@ class FloodFillViewModel @Inject constructor() : ViewModel() {
         val random = Random.nextInt(0, GRID_CELLS)
         grid[random].color = currentColor.value
         _gridState.value = grid
+        currentColor.value = Color.RED
     }
 
     fun fillOnce(row: Int, col: Int) {
@@ -54,6 +55,7 @@ class FloodFillViewModel @Inject constructor() : ViewModel() {
             || col !in 0 until GRID_CELLS
             || _gridState.value[index].color == currentColor.value
         ) {
+            _isLoadingState.value = false
             return@launch
         }
 
@@ -79,5 +81,9 @@ class FloodFillViewModel @Inject constructor() : ViewModel() {
 
     fun changeFillColor(color: Int) {
         currentColor.value = color
+    }
+
+    fun changeFillColor(color: androidx.compose.ui.graphics.Color) {
+        currentColor.value = color.toArgb()
     }
 }

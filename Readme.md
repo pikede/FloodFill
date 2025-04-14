@@ -40,7 +40,6 @@ The application allows users to select from a variety of colors to use for the f
 3. **Build and Run:** Build the project and run it on an emulator or a physical device.
 
 TODO:
-1. add compose version
-2. fix weird main screen overlay
+1. fix weird main screen overlay
 3. allow user to specify grid size
 4. allow user to specify color using slider
